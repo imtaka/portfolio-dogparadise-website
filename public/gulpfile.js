@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-
+const serveIndex = require('serve-index');
 
 function style(){
     return gulp.src('./scss/**/*.scss')
