@@ -4,6 +4,7 @@ $lightblue: #A5FFD6;
 $lightpink: #FFA69E;
 $darkpink: #FF686B;
 $black:#000000;
+$grey:#615e5e;
 
 *{
 	margin: 0;
@@ -145,5 +146,83 @@ body{
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.about{
+    padding: 2rem 0;
+
+    &__center{
+        max-width: 90vw;
+        margin: 2rem auto;
+    }
+
+    &__img{
+        margin: 3rem 0;
+        position: relative;
+    }
+
+    &__img-photo{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__img:before{
+        content: "";
+        background: $grey;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+    }
+
+    &__info{
+        margin: 3rem auto;
+    }
+
+    &__info-title{
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+
+    &__info-text{
+        line-height: 1.5;
+        font-size: 1rem;
+        margin: 2rem 0;
+    }
+
+    &__info-first-link{
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        letter-spacing: 0.2rem;
+        border: 3px solid $lightpink;
+        transition: all 1s linear;
+        margin-right: 1rem;
+    }
+
+    &__info-first-link{
+        color: $black;
+    }
+
+    &__info-first-link:hover{
+        background: $lightpink;
+    }
+}
+
+@media screen and (min-width:769px){
+    .about__center{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about__info,.about__img{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .about__info{
+        display: flex;
+        align-items: flex-end;
     }
 }
