@@ -30,7 +30,9 @@ $grey:#615e5e;
         rgba($white, 0.4),
 		rgba($white, 0.7)),
 		url('../img/dogimage1.jpg')center/cover fixed no-repeat;
-	}
+    }
+    
+
 }
 
 body{
@@ -186,12 +188,14 @@ body{
     &__info-title{
         font-size: 2rem;
         letter-spacing: 0.5rem;
+        margin: 2rem 1rem;
+
     }
 
     &__info-text{
         line-height: 1.5;
         font-size: 1rem;
-        margin: 2rem 0;
+        margin: 2rem 1rem;
     }
 
     &__info-first-link{
@@ -202,6 +206,8 @@ body{
         border: 3px solid $lightpink;
         transition: all 1s linear;
         margin-right: 1rem;
+        margin: 2rem 1rem;
+
     }
 
     &__info-first-link{
@@ -224,5 +230,106 @@ body{
     .about__info{
         display: flex;
         align-items: flex-end;
+    }
+}
+
+.feature{
+    margin: 1rem;
+
+    &__box{
+        height: 100vh;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        padding: 10rem 0;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($white,0.7),
+            rgba($lightpink,0.9)),
+            url(../img/dogimage3.jpg);
+    }
+}
+
+.feature{
+    &__title{
+        text-align: center;
+        margin-top: -4rem;
+    }
+
+    &__title-name{
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    &__center{
+        max-width: 90vw;
+        margin: 0.5rem auto;
+    }
+
+    &__service{
+        margin: 1rem auto;
+        text-align: center;
+        transition: all 0.5s ease-in;
+        padding: 2rem 0;
+    }
+
+    &__service:hover{
+        box-shadow: 0 15px 20px rgba($black, 0.8);
+    }
+
+    &__service-icon{
+        font-size: 3rem;
+    }
+
+    &__service-title{
+        font-weight: 700;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.2rem;
+    }
+
+    &__service-text{
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.5;
+        letter-spacing: 0.2rem;
+    }
+}
+
+@media screen and (min-width:768px){
+
+    .feature__box{
+        height: 100vh;
+        background-size: cover;
+        background-position: top;
+        background-repeat: repeat;
+        position: relative;
+        padding: 10rem 0;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($white,0.7),
+            rgba($lightpink,0.9)),
+            url(../img/dogimage3.jpg);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+
+    .feature__center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .feature__service{
+        flex: 0 0 calc(50% - 0.5rem);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .feature__service{
+        flex: 0 0 calc(33.3333% - 0.5rem);
     }
 }
