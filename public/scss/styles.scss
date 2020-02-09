@@ -385,3 +385,48 @@ P{
 .active:after{
     content: '\2796';
 }
+
+
+.tabtable{
+    width: 100%;
+    padding: 20px;
+}
+
+.tab-title{
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin: 1rem;
+}
+
+div.tabs{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: $lightpink;
+}
+
+div.tabs .tablink{
+    background-color: inherit;
+    float: left;
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+div.tabs .tablink:hover{
+    background-color: #ddd;
+}
+
+div.tabs .tablink.active{
+    background-color: #ccc;
+}
+
+.tabcontent{
+    background: #fff;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 1.5rem;
+
+}

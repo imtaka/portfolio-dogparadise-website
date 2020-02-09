@@ -123,6 +123,31 @@
             </p>
         </div>
     </div>
+
+    <div class="tabtable">
+        <div class="tab-title">
+            当店のあるある
+        </div>
+        <div class="tabs">
+            <button class="tablink active2" onclick="openTab(event, 'tab1')">秘密のあるある１　タップしてね</button>
+            <button class="tablink" onclick="openTab(event, 'tab2')">秘密のあるある２　タップしてね</button>
+            <button class="tablink" onclick="openTab(event, 'tab3')">秘密のあるある３　タップしてね</button>
+        </div>
+
+        <div id="tab1" class="tabcontent">
+            テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　 テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　 テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　テキスト　
+        </div>
+
+        <div id="tab2" class="tabcontent">
+            テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2 テキスト2
+        </div>
+
+        <div id="tab3" class="tabcontent">
+            テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3 テキスト3
+        </div>
+    </div>
+
+    
     <script type="text/javascript">
         let acc = document.getElementsByClassName("accordion__section");
         let i;
@@ -137,6 +162,22 @@
                     panel.style.display = "block";
                 }
             });
+        }
+
+        function openTab(e, tabId){
+            var i, tabcontent, tablink;
+
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for(i = 0; i < tabcontent.length; i++){
+                tabcontent[i].style.display = "none";
+            }
+            tablink = document.getElementsByClassName('tablink');
+            for(i = 0; i < tablink.length; i++){
+                tablink[i].className = tablink[i].className.replace('active');
+            }
+
+            document.getElementById(tabId).style.display = "block";
+            e.currentTarget.className += ' active2';
         }
     </script>
 </body>
