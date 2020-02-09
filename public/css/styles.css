@@ -223,3 +223,42 @@ body {
 @media screen and (min-width: 992px) {
   .feature__service {
     flex: 0 0 calc(33.3333% - 0.5rem); } }
+
+.accordion {
+  padding: 1rem; }
+  .accordion__title {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin: 1rem; }
+  .accordion__section {
+    background-color: #FFA69E;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #FFFFFF;
+    transition: 0.4s;
+    font: 20px Lato, sans-serif;
+    outline: none; }
+  .accordion__section-panel {
+    padding: 0 18px;
+    background-color: #FFFFFF;
+    display: none;
+    overflow: hidden; }
+
+P {
+  font: 16px Lato, sans-serif; }
+
+.active, .accordion__section:hover {
+  background-color: #FF686B; }
+
+.accordion__section:after {
+  content: '\02795';
+  font-size: 15px;
+  float: right;
+  margin-left: 5px; }
+
+.active:after {
+  content: '\2796'; }

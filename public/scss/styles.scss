@@ -333,3 +333,55 @@ body{
         flex: 0 0 calc(33.3333% - 0.5rem);
     }
 }
+
+.accordion{
+    padding: 1rem;
+
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        margin: 1rem;
+    }
+
+    &__section{
+        background-color: $lightpink;
+        color: $black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: 1px solid $white;
+        transition: 0.4s;
+        font: 20px Lato, sans-serif;
+        outline: none;
+    }
+
+    &__section-panel{
+        padding: 0 18px;
+        background-color: $white;
+        display: none;
+        overflow: hidden
+        ;
+    }
+}
+
+P{
+    font: 16px Lato, sans-serif;
+}
+
+.active, .accordion__section:hover{
+    background-color: $darkpink;
+
+}
+
+.accordion__section:after{
+    content: '\02795';
+    font-size: 15px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after{
+    content: '\2796';
+}

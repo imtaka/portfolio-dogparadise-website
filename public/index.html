@@ -97,6 +97,47 @@
         </div>
     </section>
 
+    <div class="accordion">
+        <div class="accordion__title">よくある質問</div>
+        <button class="accordion__section">ドタキャンする場合は？</button>
+        <div class="accordion__section-panel">
+            <p>テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　
+                テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　
+                テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト
+            </p>
+        </div>
 
+        <button class="accordion__section">おしっこをひっかけられたら？</button>
+        <div class="accordion__section-panel">
+            <p>テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　
+                テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　
+                テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト
+            </p>
+        </div>
+
+        <button class="accordion__section">何も注文しなくてもいいの？</button>
+        <div class="accordion__section-panel">
+            <p>テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　
+                テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　
+                テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト　テスト
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let acc = document.getElementsByClassName("accordion__section");
+        let i;
+
+        for(i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if(panel.style.display === "block"){
+                    panel.style.display = "none";
+                } else{
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
